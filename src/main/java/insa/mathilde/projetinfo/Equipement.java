@@ -33,7 +33,7 @@ public class Equipement {
         System.out.println("l'identifiant de l'équipement est "+idEquipement);
         System.out.println("l'équipement se nomme "+dEquipement);
     }
-    public void Equipement (){
+    public Equipement (int idEquipement, String dEquipement){
         this.idEquipement = idEquipement ;
         this.dEquipement = dEquipement ;
     }
