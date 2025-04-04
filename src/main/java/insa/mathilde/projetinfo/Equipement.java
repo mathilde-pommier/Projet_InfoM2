@@ -9,33 +9,27 @@ package insa.mathilde.projetinfo;
  * @author mpommier01
  */
 public class Equipement {
-    private String idEquipement;
-    private String refEquipement;
-    private String dEquipement; 
+    private int idEquipement;
+    private String dEquipement;
+    
 
-    public String getIdEquipement() {
+    public int getIdEquipement() {
         return idEquipement;
     }
 
-    public String getRefEquipement() {
-        return refEquipement;
+    public void setIdEquipement(int idEquipement) {
+        this.idEquipement = idEquipement;
     }
 
     public String getdEquipement() {
         return dEquipement;
     }
 
-    public void setIdEquipement(String idEquipement) {
-        this.idEquipement = idEquipement;
-    }
-
-    public void setRefEquipement(String refEquipement) {
-        this.refEquipement = refEquipement;
-    }
-
     public void setdEquipement(String dEquipement) {
         this.dEquipement = dEquipement;
     }
     
-    
+    public void afficher(){
+        
+    }
 }
