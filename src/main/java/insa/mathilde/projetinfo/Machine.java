@@ -126,6 +126,6 @@ public class Machine extends Equipement {
         this.t = 0;
     }
     public void supprimerMachine(){
-        
+        //faire une ArrayList
     }
 }
