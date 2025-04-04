@@ -29,7 +29,9 @@ public class Equipement {
         this.dEquipement = dEquipement;
     }
     
-    public void afficher(){
-        
+    public void afficherEquipement(){
+        System.out.println("l'identifiant de l'équipement est "+idEquipement);
+        Syste.out.println("l'équipement se nomme "+dEquipement);
     }
+    
 }
