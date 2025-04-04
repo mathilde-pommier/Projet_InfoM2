@@ -13,6 +13,39 @@ public class Gamme {
     private String refGamme;
     private ArrayList<Equipement> listEquipement;
     private ArrayList<Operation> listOp;
+
+    public String getIdGamme() {
+        return idGamme;
+    }
+
+    public void setIdGamme(String idGamme) {
+        this.idGamme = idGamme;
+    }
+
+    public String getRefGamme() {
+        return refGamme;
+    }
+
+    public void setRefGamme(String refGamme) {
+        this.refGamme = refGamme;
+    }
+
+    public ArrayList<Equipement> getListEquipement() {
+        return listEquipement;
+    }
+
+    public void setListEquipement(ArrayList<Equipement> listEquipement) {
+        this.listEquipement = listEquipement;
+    }
+
+    public ArrayList<Operation> getListOp() {
+        return listOp;
+    }
+
+    public void setListOp(ArrayList<Operation> listOp) {
+        this.listOp = listOp;
+    }
+
     
     public static void creerGamme(){
         
