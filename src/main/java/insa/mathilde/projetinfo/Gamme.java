@@ -9,10 +9,19 @@ import java.util.ArrayList;
  * @author mpommier01
  */
 public class Gamme {
+    private String name;
     private String idGamme;
     private String refGamme;
     private ArrayList<Equipement> listEquipement;
     private ArrayList<Operation> listOp;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getIdGamme() {
         return idGamme;
