@@ -13,7 +13,38 @@ public class Operation {
     private String refMachine;
     private String refEquipement;
     private float dureeOperation;
-    
+
+    public String getIdOperation() {
+        return idOperation;
+    }
+
+    public void setIdOperation(String idOperation) {
+        this.idOperation = idOperation;
+    }
+
+    public String getRefMachine() {
+        return refMachine;
+    }
+
+    public void setRefMachine(String refMachine) {
+        this.refMachine = refMachine;
+    }
+
+    public String getRefEquipement() {
+        return refEquipement;
+    }
+
+    public void setRefEquipement(String refEquipement) {
+        this.refEquipement = refEquipement;
+    }
+
+    public float getDureeOperation() {
+        return dureeOperation;
+    }
+
+    public void setDureeOperation(float dureeOperation) {
+        this.dureeOperation = dureeOperation;
+    }
     
     
     
