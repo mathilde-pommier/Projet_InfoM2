@@ -35,6 +35,6 @@ public class Equipement {
     }
     public void Equipement (){
         this.idEquipement = idEquipement ;
-        this.dEquipement = dequipement ;
+        this.dEquipement = dEquipement ;
     }
 }
