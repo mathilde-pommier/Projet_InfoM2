@@ -104,7 +104,7 @@ public class Machine extends Equipement {
         this.t = t;
     }
     
-    public Machine(String refMachine, String dmachine, int etat, int disponibilite, int x_pos, int y_pos, float c, int t){
+    Machine(String refMachine, String dmachine, int etat, int disponibilite, int x_pos, int y_pos, float c, int t){
         this.refMachine = refMachine;
         this.dmachine = dmachine;
         this.etat = etat;
@@ -115,7 +115,7 @@ public class Machine extends Equipement {
         this.t = t;
     }
     
-    public Machine(String refMachine, String dmachine){
+    Machine(String refMachine, String dmachine){
         this.refMachine = refMachine;
         this.dmachine = dmachine;
         this.etat = 1;
