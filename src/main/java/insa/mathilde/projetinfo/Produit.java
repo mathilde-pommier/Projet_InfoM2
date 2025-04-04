@@ -41,7 +41,7 @@ public class Produit {
     public void supprimerProduit(String dproduit, int codeProduit){
         
     }
-    public void Produit(int codeProduit, String dproduit) {
+    public Produit(int codeProduit, String dproduit) {
         this.codeProduit = codeProduit ;
         this.dproduit = dproduit ;
     }
