@@ -31,7 +31,7 @@ public class Equipement {
     
     public void afficherEquipement(){
         System.out.println("l'identifiant de l'équipement est "+idEquipement);
-        Syste.out.println("l'équipement se nomme "+dEquipement);
+        System.out.println("l'équipement se nomme "+dEquipement);
     }
     
 }
