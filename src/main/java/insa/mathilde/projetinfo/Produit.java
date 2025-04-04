@@ -9,15 +9,40 @@ package insa.mathilde.projetinfo;
  * @author mpommier01
  */
 public class Produit {
-    private String idProduit;
-    
-    public static void afficheProduit(Produit produit){
+    private int codeProduit ; 
+    private String dproduit ; 
+
+    public int getCodeProduit() {
+        return codeProduit;
     }
-    public static void modifierProduit(Produit produit){
+
+    public void setCodeProduit(int codeProduit) {
+        this.codeProduit = codeProduit;
+    }
+
+    public String getDproduit() {
+        return dproduit;
+    }
+
+    public void setDproduit(String dproduit) {
+        this.dproduit = dproduit;
+    }
+    
+    public void afficheProduit() {
+        System.out.println("le code du produit est "+this.codeProduit) ;
+        System.out.println("la désignation du produit est "+this.dproduit) ;
+    }
+    
+    public void modifierProduit(int codeProduit, String dproduit) {
+        this.codeProduit = codeProduit ;
+        this.dproduit = dproduit ;
+    }
+    
+    public void supprimerProduit(String dproduit, int codeProduit){
         
     }
-    
-    public static void supprimerProduit(Produit produit){
-        
+    public void Produit(int codeProduit, String dproduit) {
+        this.codeProduit = codeProduit ;
+        this.dproduit = dproduit ;
     }
 }
