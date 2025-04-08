@@ -122,12 +122,11 @@ public class Gamme {
     }
     
     public void dureeGamme(){ //c'est la somme de toutes les durées d'opération
-        size_listOp=this.listOp.size();
-        for (i=0, i<=size_listOp,i++){
+        this.size_listOp=this.listOp.size();
+        for (i=0, i<=this.size_listOp,i++){
             d_op = getDureeOperation(this.listOp.get(i));
             this.duree_gamme=d_op+this.duree_gamme;   
-        }
-                
+        }         
     /*this.listOp.forEach( this.duree_gamme = getDureeOperation(this.listOp.get()) + this.duree_gamme); essai en expression lambda mais pas réussi*/
     }
 }
