@@ -1,4 +1,4 @@
-package fr.insa.Coulibaly.tps.CircuitRLC;
+package insa.mathilde.projetinfo;
 import java.io.*;
 
 /**
