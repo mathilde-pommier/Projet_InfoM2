@@ -5,20 +5,27 @@
 package insa.mathilde.projetinfo;
 import java.util.ArrayList;
 import java.util.HashMap;
+//import java.util.Scanner;
 /**
  *
  * @author mpommier01
  */
 public class Gamme {
-    
+    public int i;
     private int ask_op;
-    private int enter_op;
-    private int enter_equip;
+    private Operation enter_op;
+    private Equipement enter_equip;
+    private int size_listOp;
+    private float d_op;
+    private float duree_gamme;
     private String idGamme;
     private String refGamme;
     private ArrayList<Equipement> listEquipement;
     private ArrayList<Operation> listOp;
     private HashMap<Operation,Equipement> gamme_op;
+
+   // Scanner scanner_op = new Scanner(System.in); tests pour lire une varaible de la classe operation
+    //Scanner scanner_equipement = new Scanner(System.in); tests pour lire une varaible de la classe equipement
 
     public String getIdGamme() {
         return idGamme;
@@ -75,10 +82,16 @@ public class Gamme {
             ask_op = Lire.i();
             if (ask_op !=0){
                 System.out.println("Entrez l'opération que vous souhaitez ajouter à votre gamme :");
-                enter_op = Lire.S();
+                enter_op = Lire.Operation();// probleme : lire une variable de la classe Operation
+                this.listOp.add(enter_op);
+                System.out.println("Entrez l'équipement que vous utiliserez pour cette opération :");
+                enter_equip = Lire.Equipement();//probleme lire une variable de la classe Equipement 
+                this.listEquipement.add(enter_equip);
+                this.gamme_op.put(enter_op,enter_equip);
             }
         }   
     }
+    
     public void afficheGamme(){
         System.out.println("La référence de la gamme est : "+this.refGamme);
         System.out.println("Le code d'identification de cette gamme est : "+this.idGamme);
@@ -108,8 +121,14 @@ public class Gamme {
        // même problème que pour supprimerMachine() dans la classe machine et que supprimerPoste() dans la classe poste
     }
     
-    public void dureeGamme(){
-        
+    public void dureeGamme(){ //c'est la somme de toutes les durées d'opération
+        size_listOp=this.listOp.size();
+        for (i=0, i<=size_listOp,i++){
+            d_op = getDureeOperation(this.listOp.get(i));
+            this.duree_gamme=d_op+this.duree_gamme;   
+        }
+                
+    /*this.listOp.forEach( this.duree_gamme = getDureeOperation(this.listOp.get()) + this.duree_gamme); essai en expression lambda mais pas réussi*/
     }
 }
     
