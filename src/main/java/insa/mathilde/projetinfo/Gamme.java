@@ -4,15 +4,21 @@
  */
 package insa.mathilde.projetinfo;
 import java.util.ArrayList;
+import java.util.HashMap;
 /**
  *
  * @author mpommier01
  */
 public class Gamme {
+    
+    private int ask_op;
+    private int enter_op;
+    private int enter_equip;
     private String idGamme;
     private String refGamme;
     private ArrayList<Equipement> listEquipement;
     private ArrayList<Operation> listOp;
+    private HashMap<Operation,Equipement> gamme_op;
 
     public String getIdGamme() {
         return idGamme;
@@ -46,6 +52,15 @@ public class Gamme {
         this.listOp = listOp;
     }
 
+    public HashMap<Operation, Equipement> getGamme_op() {
+        return gamme_op;
+    }
+
+    public void setGamme_op(HashMap<Operation, Equipement> gamme_op) {
+        this.gamme_op = gamme_op;
+    }
+    
+
     public Gamme(Produit prod, String idGamme, String refGamme){
         this.idGamme = idGamme;
         this.refGamme = refGamme;
@@ -55,14 +70,21 @@ public class Gamme {
     }
     public void creerGamme(Produit prod){
         System.out.println("Vous allez pouvoir créer une nouvelle gamme pour la fabrication de :"+prod);
-        System.out.println("Entrez le nom de l'opération ou entrez 0 si vous n'avez plus d'opération à ajouter :");
-        
+        while (ask_op!=0){
+            System.out.println("Entrez 1 ou entrez 0 si vous n'avez plus d'opération à ajouter :");
+            ask_op = Lire.i();
+            if (ask_op !=0){
+                System.out.println("Entrez l'opération que vous souhaitez ajouter à votre gamme :");
+                enter_op = Lire.S();
+            }
+        }   
     }
     public void afficheGamme(){
         System.out.println("La référence de la gamme est : "+this.refGamme);
         System.out.println("Le code d'identification de cette gamme est : "+this.idGamme);
         System.out.println("Pour réaliser cette gamme les équipements suivant sont utilisés : "+this.getListEquipement());
     }
+    
     public void ajouterOp (Operation op){
         if (op!=null && this.listOp.contains(op)!=true){
             this.listOp.add(op);
@@ -84,6 +106,10 @@ public class Gamme {
     }  
     public void supprimerGamme(){
        // même problème que pour supprimerMachine() dans la classe machine et que supprimerPoste() dans la classe poste
+    }
+    
+    public void dureeGamme(){
+        
     }
 }
     

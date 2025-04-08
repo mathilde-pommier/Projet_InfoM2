@@ -9,15 +9,15 @@ package insa.mathilde.projetinfo;
  * @author mpommier01
  */
 public class Equipement {
-    private int idEquipement;
+    private String idEquipement;
     private String dEquipement;
     
 
-    public int getIdEquipement() {
+    public String getIdEquipement() {
         return idEquipement;
     }
 
-    public void setIdEquipement(int idEquipement) {
+    public void setIdEquipement(String idEquipement) {
         this.idEquipement = idEquipement;
     }
 
@@ -33,7 +33,7 @@ public class Equipement {
         System.out.println("l'identifiant de l'équipement est "+idEquipement);
         System.out.println("l'équipement se nomme "+dEquipement);
     }
-    Equipement (int idEquipement, String dEquipement){
+    public Equipement (String idEquipement, String dEquipement){
         this.idEquipement = idEquipement ;
         this.dEquipement = dEquipement ;
     }

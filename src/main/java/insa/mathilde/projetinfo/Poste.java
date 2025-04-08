@@ -9,28 +9,36 @@ import java.util.ArrayList;
  * @author mpommier01
  */
 public class Poste extends Equipement {
-    private int refPoste;
+    private String refPoste;
     private String dPoste;
     private ArrayList<Machine> listMachine;
     
-    public void affichePoste(Poste poste){
-        System.out.println("Le poste est"+poste);
+    public Poste (String refposte, String dposte){
+        super(refposte,dposte);
+        this.refPoste = refposte;
+        this.dPoste = dposte;
     }
-    public void modifierPoste(Poste poste){
-        
+    public void affichePoste(Poste poste){
+        System.out.println(" poste :"+poste);
     }
     
-    // Méthode pour ajouter une machine au poste de travail
+    public void modifierPoste(Machine machine, boolean ajouter) {
+        if (ajouter==true) {
+            ajouterMachine(machine);
+        } else {
+            supprimerMachine(machine);
+        }
+    }
+    
     public void ajouterMachine(Machine machine) {
-        if (machine != null && !listMachine.contains(machine)) {
+        if (machine != null && listMachine.contains(machine)!=true) {
             listMachine.add(machine);
             System.out.println("Machine ajoutée avec succès.");
         } else {
             System.out.println("La machine est déjà présente ou invalide.");
         }
     }
-
-    // Méthode pour supprimer une machine du poste de travail
+    
     public void supprimerMachine(Machine machine) {
         if (listMachine.contains(machine)) {
             listMachine.remove(machine);
@@ -39,13 +47,5 @@ public class Poste extends Equipement {
             System.out.println("La machine n'est pas présente dans la liste.");
         }
     }
-
-    // Méthode pour modifier la composition du poste (ajouter ou supprimer des machines)
-    public void modifierPoste(Machine machine, boolean ajouter) {
-        if (ajouter) {
-            ajouterMachine(machine);
-        } else {
-            supprimerMachine(machine);
-        }
-    }
+    
 }

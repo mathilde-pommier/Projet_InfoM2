@@ -9,14 +9,14 @@ package insa.mathilde.projetinfo;
  * @author mpommier01
  */
 public class Machine extends Equipement {
- private String refMachine;
+    private String refMachine;
     private String dmachine;
     private int etat;
     private int disponibilite;
     private int x_pos;
     private int y_pos;
     private float c;
-    private int t;
+    private int type;
 
     public int getEtat() {
         return etat;
@@ -66,12 +66,12 @@ public class Machine extends Equipement {
         this.c = c;
     }
 
-    public int getT() {
-        return t;
+    public int getType() {
+        return type;
     }
 
-    public void setT(int t) {
-        this.t = t;
+    public void setType(int t) {
+        this.type = t;
     }
 
     
@@ -90,7 +90,7 @@ public class Machine extends Equipement {
         System.out.println("disponibilité : "+this.disponibilite);
         System.out.println("Cette machine se trouve à la position : "+this.x_pos+","+this.y_pos);
         System.out.println("Coût horaire d'utilisation : "+this.c);
-        System.out.println("temps d'utilisation : "+this.t);
+        System.out.println("temps d'utilisation : "+this.type);
     }
     
     public void modifierMachine(String refMachine, String dmachine, int etat, int disponibilite, int x_pos, int y_pos, float c, int t){
@@ -101,10 +101,11 @@ public class Machine extends Equipement {
         this.x_pos = x_pos;
         this.y_pos = y_pos;
         this.c = c;
-        this.t = t;
+        this.type = t;
     }
     
-    Machine(String refMachine, String dmachine, int etat, int disponibilite, int x_pos, int y_pos, float c, int t){
+    public Machine(String refMachine, String dmachine, int etat, int disponibilite, int x_pos, int y_pos, float c, int t){
+        super(refMachine,dmachine);
         this.refMachine = refMachine;
         this.dmachine = dmachine;
         this.etat = etat;
@@ -112,10 +113,11 @@ public class Machine extends Equipement {
         this.x_pos = x_pos;
         this.y_pos = y_pos;
         this.c = c;
-        this.t = t;
+        this.type = t;
     }
     
-    Machine(String refMachine, String dmachine){
+    public Machine(String refMachine, String dmachine){
+        super(refMachine,dmachine);
         this.refMachine = refMachine;
         this.dmachine = dmachine;
         this.etat = 1;
@@ -123,7 +125,7 @@ public class Machine extends Equipement {
         this.x_pos = 0;
         this.y_pos = 0;
         this.c = 0;
-        this.t = 0;
+        this.type = 0;
     }
     public void supprimerMachine(){
         //faire une ArrayList

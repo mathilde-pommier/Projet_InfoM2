@@ -10,7 +10,7 @@ package insa.mathilde.projetinfo;
  */
 public class Operation {
     private String idOperation;
-    private String refMachine;
+    private String dOperation;
     private String refEquipement;
     private float dureeOperation;
 
@@ -20,14 +20,6 @@ public class Operation {
 
     public void setIdOperation(String idOperation) {
         this.idOperation = idOperation;
-    }
-
-    public String getRefMachine() {
-        return refMachine;
-    }
-
-    public void setRefMachine(String refMachine) {
-        this.refMachine = refMachine;
     }
 
     public String getRefEquipement() {
@@ -45,7 +37,20 @@ public class Operation {
     public void setDureeOperation(float dureeOperation) {
         this.dureeOperation = dureeOperation;
     }
+
+    public String getdOperation() {
+        return dOperation;
+    }
+
+    public void setdOperation(String dOperation) {
+        this.dOperation = dOperation;
+    }
     
-    
-    
+    public Operation (String idOperation, String dOperation, String refEquipement, float dureeOp){
+        this.idOperation = idOperation;
+        this.dOperation = dOperation;
+        this.refEquipement = refEquipement;
+        this.dureeOperation = dureeOp;
+    }
 }
+// j'ai enlevé le refmachine car il est compris dans le refequipement
