@@ -14,6 +14,13 @@ public class Operation {
     private String refEquipement;
     private float dureeOperation;
 
+    public Operation (String idOperation, String dOperation, String refEquipement, float dureeOp){
+        this.idOperation = idOperation;
+        this.dOperation = dOperation;
+        this.refEquipement = refEquipement;
+        this.dureeOperation = dureeOp;
+    }
+    
     public String getIdOperation() {
         return idOperation;
     }
@@ -46,11 +53,5 @@ public class Operation {
         this.dOperation = dOperation;
     }
     
-    public Operation (String idOperation, String dOperation, String refEquipement, float dureeOp){
-        this.idOperation = idOperation;
-        this.dOperation = dOperation;
-        this.refEquipement = refEquipement;
-        this.dureeOperation = dureeOp;
-    }
 }
 // j'ai enlevé le refmachine car il est compris dans le refequipement
