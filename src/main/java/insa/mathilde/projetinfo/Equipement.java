@@ -12,7 +12,11 @@ public class Equipement {
     private String idEquipement;
     private String dEquipement;
     
-
+    public Equipement (String idEquipement, String dEquipement){
+        this.idEquipement = idEquipement ;
+        this.dEquipement = dEquipement ;
+    }
+    
     public String getIdEquipement() {
         return idEquipement;
     }
@@ -32,9 +36,5 @@ public class Equipement {
     public void afficherEquipement(){
         System.out.println("l'identifiant de l'équipement est "+idEquipement);
         System.out.println("l'équipement se nomme "+dEquipement);
-    }
-    public Equipement (String idEquipement, String dEquipement){
-        this.idEquipement = idEquipement ;
-        this.dEquipement = dEquipement ;
     }
 }
