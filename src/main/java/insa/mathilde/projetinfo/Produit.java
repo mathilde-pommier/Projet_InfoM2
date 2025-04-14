@@ -11,7 +11,11 @@ package insa.mathilde.projetinfo;
 public class Produit {
     private int codeProduit ; 
     private String dproduit ; 
-
+    
+    public Produit(int codeProduit, String dproduit) {
+        this.codeProduit = codeProduit ;
+        this.dproduit = dproduit ;
+    }  
     public int getCodeProduit() {
         return codeProduit;
     }
@@ -40,9 +44,5 @@ public class Produit {
     
     public void supprimerProduit(String dproduit, int codeProduit){
         
-    }
-    public Produit(int codeProduit, String dproduit) {
-        this.codeProduit = codeProduit ;
-        this.dproduit = dproduit ;
     }
 }

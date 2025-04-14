@@ -15,7 +15,6 @@ public class Gamme {
     private int ask_op;
     private Operation enter_op;
     private Equipement enter_equip;
-    private int size_listOp;
     private float d_op;
     private float duree_gamme;
     private String idGamme;
@@ -121,8 +120,7 @@ public class Gamme {
     }
     
     public void dureeGamme(){ //c'est la somme de toutes les durées d'opération
-        this.size_listOp=this.listOp.size();
-        for (i=0, i<=this.size_listOp,i++){
+        for (i=0, i<=this.listOp.size(),i++){
             d_op = getDureeOperation(this.listOp.get(i));
             this.duree_gamme=d_op+this.duree_gamme;   
         }         

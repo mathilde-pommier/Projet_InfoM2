@@ -17,7 +17,30 @@ public class Machine extends Equipement {
     private int y_pos;
     private float c;
     private int type;
-
+    
+    public Machine(String refMachine, String dmachine, int etat, int disponibilite, int x_pos, int y_pos, float c, int t){
+        super(refMachine,dmachine);
+        this.refMachine = refMachine;
+        this.dmachine = dmachine;
+        this.etat = etat;
+        this.disponibilite = disponibilite;
+        this.x_pos = x_pos;
+        this.y_pos = y_pos;
+        this.c = c;
+        this.type = t;
+    }
+    
+    public Machine(String refMachine, String dmachine){
+        super(refMachine,dmachine);
+        this.refMachine = refMachine;
+        this.dmachine = dmachine;
+        this.etat = 1;
+        this.disponibilite = 0;
+        this.x_pos = 0;
+        this.y_pos = 0;
+        this.c = 0;
+        this.type = 0;
+    }
     public int getEtat() {
         return etat;
     }
@@ -104,29 +127,6 @@ public class Machine extends Equipement {
         this.type = t;
     }
     
-    public Machine(String refMachine, String dmachine, int etat, int disponibilite, int x_pos, int y_pos, float c, int t){
-        super(refMachine,dmachine);
-        this.refMachine = refMachine;
-        this.dmachine = dmachine;
-        this.etat = etat;
-        this.disponibilite = disponibilite;
-        this.x_pos = x_pos;
-        this.y_pos = y_pos;
-        this.c = c;
-        this.type = t;
-    }
-    
-    public Machine(String refMachine, String dmachine){
-        super(refMachine,dmachine);
-        this.refMachine = refMachine;
-        this.dmachine = dmachine;
-        this.etat = 1;
-        this.disponibilite = 0;
-        this.x_pos = 0;
-        this.y_pos = 0;
-        this.c = 0;
-        this.type = 0;
-    }
     public void supprimerMachine(){
         //faire une ArrayList
     }
