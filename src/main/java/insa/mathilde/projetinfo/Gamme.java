@@ -13,14 +13,15 @@ import java.util.HashMap;
 public class Gamme {
     public int i;
     private int ask_op;
-    private Operation enter_op;
+    private String enter_op;
+    private Operation enter_op1;
     private Equipement enter_equip;
     private float d_op;
     private float duree_gamme;
     private String idGamme;
     private String refGamme;
-    private ArrayList<Equipement> listEquipement = new ArrayList();
-    private ArrayList<Operation> listOp = new ArrayList();
+    private ArrayList<Equipement> listEquipement;
+    private ArrayList<Operation> listOp;
     private HashMap<Operation,Equipement> gamme_op;
 
    // Scanner scanner_op = new Scanner(System.in); tests pour lire une varaible de la classe operation
@@ -28,8 +29,9 @@ public class Gamme {
     public Gamme (String idGamme, String refGamme){
         this.idGamme = idGamme;
         this.refGamme = refGamme;
-        this.listEquipement=null;
-        this.listOp=null;
+        this.listEquipement= new ArrayList();
+        this.listOp = new ArrayList();
+        this.gamme_op = new HashMap();
         System.out.println("La nouvelle gamme a été créée avec succès !");
     }
     
@@ -80,8 +82,9 @@ public class Gamme {
             ask_op = Lire.i();
             if (ask_op !=0){
                 System.out.println("Entrez l'opération que vous souhaitez ajouter à votre gamme :");
-                enter_op = Lire.Operation();// probleme : lire une variable de la classe Operation
-                this.listOp.add(enter_op);
+                enter_op = Lire.S();// probleme : lire une variable de la classe Operation
+                enter_op1 = enter_op;
+                this.listOp.add(enter_op1);
                 System.out.println("Entrez l'équipement que vous utiliserez pour cette opération :");
                 enter_equip = Lire.Equipement();//probleme lire une variable de la classe Equipement 
                 this.listEquipement.add(enter_equip);
@@ -119,12 +122,23 @@ public class Gamme {
        // même problème que pour supprimerMachine() dans la classe machine et que supprimerPoste() dans la classe poste
     }
     
-    public void dureeGamme(){ //c'est la somme de toutes les durées d'opération
-        for (i=0, i<=this.listOp.size(),i++){
-            d_op = getDureeOperation(this.listOp.get(i));
+    public float dureeGamme(){ //c'est la somme de toutes les durées d'opération
+        this.duree_gamme=0;
+        d_op=0;
+        for (i=0; i<=this.listOp.size();i++){
+            d_op = this.listOp.get(i).getDureeOperation();
             this.duree_gamme=d_op+this.duree_gamme;   
-        }         
-    /*this.listOp.forEach( this.duree_gamme = getDureeOperation(this.listOp.get()) + this.duree_gamme); essai en expression lambda mais pas réussi*/
+        }
+        return this.duree_gamme;
+    }
+    
+    public float cout_gamme(){
+        d_op=0;
+        for(i=0;i<=this.gamme_op.size();i++){
+            d_op = this.listOp.get(i).getDureeOperation();
+            if this.gamme_op.get(i) 
+            
+        }
     }
 }
     
