@@ -20,13 +20,20 @@ public class Gamme {
     private float duree_gamme;
     private String idGamme;
     private String refGamme;
-    private ArrayList<Equipement> listEquipement;
-    private ArrayList<Operation> listOp;
+    private ArrayList<Equipement> listEquipement = new ArrayList();
+    private ArrayList<Operation> listOp = new ArrayList();
     private HashMap<Operation,Equipement> gamme_op;
 
    // Scanner scanner_op = new Scanner(System.in); tests pour lire une varaible de la classe operation
     //Scanner scanner_equipement = new Scanner(System.in); tests pour lire une varaible de la classe equipement
-
+    public Gamme (String idGamme, String refGamme){
+        this.idGamme = idGamme;
+        this.refGamme = refGamme;
+        this.listEquipement=null;
+        this.listOp=null;
+        System.out.println("La nouvelle gamme a été créée avec succès !");
+    }
+    
     public String getIdGamme() {
         return idGamme;
     }
@@ -67,14 +74,6 @@ public class Gamme {
         this.gamme_op = gamme_op;
     }
     
-
-    public Gamme(Produit prod, String idGamme, String refGamme){
-        this.idGamme = idGamme;
-        this.refGamme = refGamme;
-        // this.listEquipement=; il faut trouver comment initialiser la liste de la classe mais en la mettant vide
-        //this.listOp=[]; de même pour celle ci
-        System.out.println("La nouvelle gamme a été créée avec succès !");
-    }
     public void creerGamme(Produit prod){
         System.out.println("Vous allez pouvoir créer une nouvelle gamme pour la fabrication de :"+prod);
         while (ask_op!=0){
