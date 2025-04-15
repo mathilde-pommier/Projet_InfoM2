@@ -12,7 +12,6 @@ import java.util.HashMap;
  */
 public class Gamme {
     public int i;
-    public int j;
     private int ask_op;
     private Operation enter_op;
     /*private Equipement enter_equip;
