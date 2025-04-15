@@ -13,6 +13,17 @@ public class Personnel {
     private String Nom;
     private String Prenom;
 
+    public Personnel(String idPersonne, String Nom, String Prenom){
+        this.idPersonne =idPersonne;
+        this.Nom = Nom;
+        this.Prenom = Prenom;
+    }
+    
+    public Personnel (String idPersonne){
+        this.idPersonne=idPersonne;
+        this.Nom="";
+        this.Prenom="";
+    }
     public String getIdPersonne() {
         return idPersonne;
     }
