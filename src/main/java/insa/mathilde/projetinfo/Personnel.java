@@ -48,6 +48,9 @@ public class Personnel {
         this.Prenom = Prenom;
     }
     
-    
-    
+    public void fichePersonnel(){
+        System.out.println("Identifiant : "+this.idPersonne);
+        System.out.println("Nom : "+this.Nom);
+        System.out.println("Prenom : "+this.Prenom);
+    }
 }

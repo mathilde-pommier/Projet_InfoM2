@@ -46,6 +46,8 @@ public class Gamme {
         this.listOp = new ArrayList();
         this.gamme_op = new HashMap();
         this.listMachine = new ArrayList();
+        this.cout_gamme=0;
+        this.duree_gamme=0;
         System.out.println("La nouvelle gamme a été créée avec succès !");
     }
     
