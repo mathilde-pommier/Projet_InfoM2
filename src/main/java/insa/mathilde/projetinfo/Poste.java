@@ -18,6 +18,31 @@ public class Poste extends Equipement {
         this.refPoste = refposte;
         this.dPoste = dposte;
     }
+
+    public String getRefPoste() {
+        return refPoste;
+    }
+
+    public void setRefPoste(String refPoste) {
+        this.refPoste = refPoste;
+    }
+
+    public String getdPoste() {
+        return dPoste;
+    }
+
+    public void setdPoste(String dPoste) {
+        this.dPoste = dPoste;
+    }
+
+    public ArrayList<Machine> getListMachine() {
+        return listMachine;
+    }
+
+    public void setListMachine(ArrayList<Machine> listMachine) {
+        this.listMachine = listMachine;
+    }
+    
     public void affichePoste(Poste poste){
         System.out.println(" poste :"+poste);
     }
