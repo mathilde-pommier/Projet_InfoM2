@@ -9,17 +9,18 @@ import java.util.ArrayList;
  * @author mpommier01
  */
 public class Poste extends Equipement {
-    private String refPoste;
-    private String dPoste;
+    //private String refPoste;
+    //private String dPoste;
     private ArrayList<Machine> listMachine;
     
     public Poste (String refposte, String dposte){
         super(refposte,dposte);
-        this.refPoste = refposte;
-        this.dPoste = dposte;
+        this.listMachine = new ArrayList();
+        //this.refPoste = refposte;
+        //this.dPoste = dposte;
     }
 
-    public String getRefPoste() {
+    /*public String getRefPoste() {
         return refPoste;
     }
 
@@ -33,7 +34,7 @@ public class Poste extends Equipement {
 
     public void setdPoste(String dPoste) {
         this.dPoste = dPoste;
-    }
+    }*/
 
     public ArrayList<Machine> getListMachine() {
         return listMachine;
