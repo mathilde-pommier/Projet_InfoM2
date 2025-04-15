@@ -40,4 +40,8 @@ public class Operateur extends Personnel {
         this.competences_machine = competences_machine;
     }
     
+    public void ficheOp(){
+        super.fichePersonnel();
+        System.out.println("Cet opérateur est capable de gerer les machines suivantes : "+this.competences_machine);
+    }
 }

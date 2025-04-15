@@ -35,4 +35,10 @@ public class ChefAtelier extends Personnel {
     public void setNb_employe(int nb_employe) {
         this.nb_employe = nb_employe;
     }
+    
+    public void ficheChef(){
+        System.out.println("Chef de l'atelier "+this.nom_atelier);
+        super.fichePersonnel();
+        System.out.println("nombre d'employes : "+this.nb_employe);
+    }
 }

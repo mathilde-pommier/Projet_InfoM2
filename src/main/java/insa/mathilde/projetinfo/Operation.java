@@ -11,13 +11,14 @@ package insa.mathilde.projetinfo;
 public class Operation {
     private String idOperation;
     private String dOperation;
-    private String refEquipement;
+    /*private String refMachine; je pense que ce n'est pas utile pusiqu'une operation peut être réalisée sur 
+    plusieurs machines différentes d'après le diagramme UML*/
     private float dureeOperation;
 
-    public Operation (String idOperation, String dOperation, String refEquipement, float dureeOp){
+    public Operation (String idOperation, String dOperation, String refMachine, float dureeOp){
         this.idOperation = idOperation;
         this.dOperation = dOperation;
-        this.refEquipement = refEquipement;
+        //this.refMachine = refMachine; pour les raison précédentes
         this.dureeOperation = dureeOp;
     }
     
@@ -29,13 +30,14 @@ public class Operation {
         this.idOperation = idOperation;
     }
 
-    public String getRefEquipement() {
-        return refEquipement;
+    /*public String getRefMachine() {
+        return refMachine;
     }
 
-    public void setRefEquipement(String refEquipement) {
-        this.refEquipement = refEquipement;
+    public void setRefMachine(String refMachine) {
+        this.refMachine = refMachine;
     }
+    pour les raisons précédentes : mis en commentaire*/
 
     public float getDureeOperation() {
         return dureeOperation;
@@ -53,5 +55,9 @@ public class Operation {
         this.dOperation = dOperation;
     }
     
+    public void afficheOperation(){
+        System.out.println("Identifiant de l'opération : "+this.idOperation);
+        System.out.println("Description : "+this.dOperation);
+        System.out.println("Cette opération a une duree de : "+this.dureeOperation);
+    }
 }
-// j'ai enlevé le refmachine car il est compris dans le refequipement

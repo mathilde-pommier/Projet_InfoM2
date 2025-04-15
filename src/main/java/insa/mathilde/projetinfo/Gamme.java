@@ -4,7 +4,7 @@
  */
 package insa.mathilde.projetinfo;
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 //import java.util.Scanner;
 /**
  *
@@ -35,7 +35,10 @@ public class Gamme {
     concerne la lite d'equipements est mis en commentaire*/
     private ArrayList<Machine> listMachine;
     private ArrayList<Operation> listOp;
-    private HashMap<Operation,Machine> gamme_op;
+    /* on part du postulat que nous n'avons ni deux fois la même opération ni deux fois la même liste*/
+    private LinkedHashMap<Operation,Machine> gamme_op;
+    /*j'utilise une linkedHashMap pour garantir que l'odre de parcours est l'odre d'insertion
+    On part aussi du postulat q'un produit ne peut subir q'une seule foi sune opération*/
 
    // Scanner scanner_op = new Scanner(System.in); tests pour lire une varaible de la classe operation
     //Scanner scanner_equipement = new Scanner(System.in); tests pour lire une varaible de la classe equipement
@@ -44,7 +47,7 @@ public class Gamme {
         this.refGamme = refGamme;
         /*this.listEquipement= new ArrayList(); en commentaire pour la raison qui précède*/
         this.listOp = new ArrayList();
-        this.gamme_op = new HashMap();
+        this.gamme_op = new LinkedHashMap();
         this.listMachine = new ArrayList();
         this.cout_gamme=0;
         this.duree_gamme=0;
@@ -84,11 +87,11 @@ public class Gamme {
         this.listOp = listOp;
     }
 
-    public HashMap<Operation, Machine> getGamme_op() {
+    public LinkedHashMap<Operation, Machine> getGamme_op() {
         return gamme_op;
     }
 
-    public void setGamme_op(HashMap<Operation, Machine> gamme_op) {
+    public void setGamme_op(LinkedHashMap<Operation, Machine> gamme_op) {
         this.gamme_op = gamme_op;
     }
 

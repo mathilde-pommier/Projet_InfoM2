@@ -44,8 +44,10 @@ public class Poste extends Equipement {
         this.listMachine = listMachine;
     }
     
-    public void affichePoste(Poste poste){
-        System.out.println(" poste :"+poste);
+    public void affichePoste(){
+        System.out.println("Identifiant du poste : "+super.getIdEquipement());
+        System.out.println("Description : "+super.getdEquipement());
+        System.out.println("Ce poste contient les machines suivantes : "+this.listMachine);
     }
     
     public void modifierPoste(Machine machine, boolean ajouter) {
