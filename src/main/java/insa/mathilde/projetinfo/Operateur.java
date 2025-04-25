@@ -12,14 +12,14 @@ public class Operateur extends Personnel {
     private int dispo;
     private ArrayList<Machine> competences_machine;
 
-    public Operateur(String idOperateur, String Nom_operateur, String Prenom_operateur, int dispo) {
-        super(idOperateur,Nom_operateur,Prenom_operateur);
+    public Operateur(String idOperateur, String Nom_operateur, String Prenom_operateur, int dispo, String motdepasse_operateur) {
+        super(idOperateur,Nom_operateur,Prenom_operateur, motdepasse_operateur);
         this.dispo = dispo;
         this.competences_machine = new ArrayList();
     }
 
-    public Operateur (String idOperateur, String Nom_operateur, String prenomOperateur){
-        super(idOperateur,Nom_operateur,prenomOperateur);
+    public Operateur (String idOperateur, String Nom_operateur, String prenomOperateur, String motdepasse_operateur){
+        super(idOperateur,Nom_operateur,prenomOperateur, motdepasse_operateur);
         this.dispo=0;
         this.competences_machine = new ArrayList();
     }
