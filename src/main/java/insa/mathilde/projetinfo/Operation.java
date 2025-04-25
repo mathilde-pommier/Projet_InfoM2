@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package insa.mathilde.projetinfo;
-
+import java.util.ArrayList;
 /**
  *
  * @author mpommier01

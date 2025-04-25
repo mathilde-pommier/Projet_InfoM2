@@ -10,7 +10,7 @@ package insa.mathilde.projetinfo;
  */
 public class Machine extends Equipement {
     private String refMachine;
-    //private String dmachine;
+    private String dmachine;
     private int etat;
     private int disponibilite;
     private int x_pos;
@@ -21,7 +21,7 @@ public class Machine extends Equipement {
     public Machine(String refMachine, String dmachine, int etat, int disponibilite, int x_pos, int y_pos, float c, int t){
         super(refMachine,dmachine);
         this.refMachine = refMachine;
-        //this.dmachine = dmachine;
+        this.dmachine = dmachine;
         this.etat = etat;
         this.disponibilite = disponibilite;
         this.x_pos = x_pos;
@@ -33,7 +33,7 @@ public class Machine extends Equipement {
     public Machine(String refMachine, String dmachine){
         super(refMachine,dmachine);
         this.refMachine = refMachine;
-        //this.dmachine = dmachine;
+        this.dmachine = dmachine;
         this.etat = 1;
         this.disponibilite = 0;
         this.x_pos = 0;
@@ -49,7 +49,7 @@ public class Machine extends Equipement {
         this.etat = etat;
     }
     
-    /*public String getRefMachine() {
+    public String getRefMachine() {
         return refMachine;
     }
 
@@ -63,7 +63,7 @@ public class Machine extends Equipement {
 
     public void setDmachine(String dmachine) {
         this.dmachine = dmachine;
-    }*/
+    }
 
     public int getX_pos() {
         return x_pos;
@@ -109,8 +109,8 @@ public class Machine extends Equipement {
     public void afficheMachine(){
         System.out.println("référence : "+super.getIdEquipement());
         System.out.println("description : "+super.getdEquipement());
-        /*System.out.println("référence : "+this.refMachine);
-        System.out.println("description : "+this.dmachine);*/
+        System.out.println("référence : "+this.refMachine);
+        System.out.println("description : "+this.dmachine);
         System.out.println("état : "+this.etat);
         System.out.println("disponibilité : "+this.disponibilite);
         System.out.println("Cette machine se trouve à la position : "+this.x_pos+","+this.y_pos);
