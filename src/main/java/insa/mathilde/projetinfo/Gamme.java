@@ -38,7 +38,7 @@ public class Gamme {
     /* on part du postulat que nous n'avons ni deux fois la même opération ni deux fois la même liste*/
     private LinkedHashMap<Operation,Machine> gamme_op;
     /*j'utilise une linkedHashMap pour garantir que l'odre de parcours est l'odre d'insertion
-    On part aussi du postulat q'un produit ne peut subir q'une seule foi sune opération*/
+    On part aussi du postulat q'un produit ne peut subir q'une seule fois sune opération*/
 
    // Scanner scanner_op = new Scanner(System.in); tests pour lire une varaible de la classe operation
     //Scanner scanner_equipement = new Scanner(System.in); tests pour lire une varaible de la classe equipement
@@ -121,13 +121,21 @@ public class Gamme {
     
     
     public void creerGamme(Produit prod){
+        String idOperation;
+        String dOperation;
+        float dureeOp;
+        String refEquipement;
         System.out.println("Vous allez pouvoir créer une nouvelle gamme pour la fabrication de :"+prod);
         while (ask_op!=0){
             System.out.println("Entrez 1 ou entrez 0 si vous n'avez plus d'opération à ajouter :");
             ask_op = Lire.i();
             if (ask_op !=0){
-                System.out.println("Entrez l'opération que vous souhaitez ajouter à votre gamme :");
-                enter_op = Lire.Operation();// probleme : lire une variable de type Operation
+                System.out.println("Entrez l'identifiant de l'opération que vous souhaitez ajouter à votre gamme :");
+                idOperation = Lire.S();// en gros je sépare les trois attributs d'un élmt de opération
+                System.out.println("Entrez la désignation de l'opération que vous souhaitez ajouter à votre gamme :");
+                dOperation = Lire.S();
+                System.out.println("Entrez la durée de l'opération que vous souhaitez ajouter à votre gamme :");
+                dureeOp = Lire.f();
                 this.listOp.add(enter_op);
                 System.out.println("Entrez la machine dont vous avez besoin pour réaliser cette opération : ");
                 enter_machine= Lire.Machine();// problème : lire une variable de type Machine

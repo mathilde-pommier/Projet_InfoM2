@@ -52,9 +52,9 @@ public class Poste extends Equipement {
     
     public void modifierPoste(Machine machine, boolean ajouter) {
         if (ajouter==true) {
-            ajouterMachine(machine);
+            this.ajouterMachine(machine);
         } else {
-            supprimerMachine(machine);
+            this.supprimerMachine(machine);
         }
     }
     

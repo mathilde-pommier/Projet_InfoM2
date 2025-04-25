@@ -15,10 +15,10 @@ public class Operation {
     plusieurs machines différentes d'après le diagramme UML*/
     private float dureeOperation;
 
-    public Operation (String idOperation, String dOperation, String refMachine, float dureeOp){
+    public Operation (String idOperation, String dOperation, float dureeOp){
         this.idOperation = idOperation;
         this.dOperation = dOperation;
-        //this.refMachine = refMachine; pour les raison précédentes
+        //this.refMachine = refMachine; pour les raisons précédentes
         this.dureeOperation = dureeOp;
     }
     

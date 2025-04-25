@@ -9,7 +9,7 @@ package insa.mathilde.projetinfo;
  * @author mpommier01
  */
 public class Machine extends Equipement {
-    // private String refMachine;
+    private String refMachine;
     //private String dmachine;
     private int etat;
     private int disponibilite;
@@ -20,7 +20,7 @@ public class Machine extends Equipement {
     
     public Machine(String refMachine, String dmachine, int etat, int disponibilite, int x_pos, int y_pos, float c, int t){
         super(refMachine,dmachine);
-        //this.refMachine = refMachine;
+        this.refMachine = refMachine;
         //this.dmachine = dmachine;
         this.etat = etat;
         this.disponibilite = disponibilite;
@@ -32,7 +32,7 @@ public class Machine extends Equipement {
     
     public Machine(String refMachine, String dmachine){
         super(refMachine,dmachine);
-        //this.refMachine = refMachine;
+        this.refMachine = refMachine;
         //this.dmachine = dmachine;
         this.etat = 1;
         this.disponibilite = 0;
